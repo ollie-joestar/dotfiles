@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/lua/tokyonight'
+let g:netrw_dirhist_5='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/lua'
+let g:netrw_dirhist_4='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight'
+let g:netrw_dirhist_3='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/colors'
+let g:netrw_dirhist_2='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight'
+let g:netrw_dirhist_1='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/colors'
+let g:netrw_dirhist_0='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/lua/tokyonight'
+let g:netrw_dirhist_9='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/lua'
+let g:netrw_dirhist_8='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight'
+let g:netrw_dirhist_7='/home/ollie/.local/share/nvim/site/pack/packer/start/tokyonight/colors'

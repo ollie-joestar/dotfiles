@@ -3,7 +3,6 @@
 autoload -Uz promptinit
 promptinit
 #prompt adam1
-#PROMPT='%B%(?.%F{green}Joestar.%F{red}XxXxXxX)%f%b %B%F{4}%1~%f%b%# '
 PROMPT='%B%(?.%F{green}Joestar.%F{red}XxXxXxX)%f%b %B%F{4}%1~%f%b '
 
 setopt histignorealldups sharehistory
@@ -20,23 +19,11 @@ HISTFILE=~/.zsh_history
 autoload -Uz compinit
 compinit
 
-if [ -x /usr/bin/dircolors ]; then
-		test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-		alias ls='ls --color=auto'
-		alias dir='dir --color=auto'
-		alias vdir='vdir --color=auto'
-		alias grep='grep --color=auto'
-		alias fgrep='fgrep --color=auto'
-		alias egrep='egrep --color=auto'
-fi
-
-alias ccc='cc -Wall -Wextra -Werror -g'
-alias nvim='flatpak run io.neovim.nvim'
-#zstyle ':completion:*' auto-description 'specify: %d'
-#zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=long
+zstyle ':completion:*' menu select=2
 eval "$(dircolors -b)"
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
@@ -49,4 +36,15 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-export TERM="screen-256color"
+
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+alias ccc='cc -Wall -Wextra -Werror -g'
+alias nvim='flatpak run io.neovim.nvim'

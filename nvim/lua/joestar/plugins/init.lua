@@ -8,3 +8,5 @@ require ("joestar.plugins.lsp")
 require ("joestar.plugins.lualine")
 require ("joestar.plugins.catppuccin")
 require ("joestar.plugins.42")
+require ("joestar.plugins.presence")
+

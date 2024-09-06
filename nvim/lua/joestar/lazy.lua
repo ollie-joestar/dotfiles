@@ -2,7 +2,7 @@ require("lazy").setup({
 	{
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.5",
-	dependencies = {"nvim-lua/plenary.nvim"}
+	dependencies = {"nvim-lua/plenary.nvim", "BurntSushi/ripgrep"}
 	},
 --	{"scottmckendry/cyberdream.nvim"},
 	{ 
@@ -16,6 +16,8 @@ require("lazy").setup({
 	{"mbbill/undotree"},
 	{"tpope/vim-fugitive"},
 	{"nvim-lualine/lualine.nvim"},
+	{'Diogo-ss/42-header.nvim'},
+	{"andweeb/presence.nvim"},
 --LSP
 	{"neovim/nvim-lspconfig"},
 	{"williamboman/mason.nvim"},
@@ -27,6 +29,5 @@ require("lazy").setup({
 	{"saadparwaiz1/cmp_luasnip"},
 	{"L3MON4D3/LuaSnip"},
 	{"rafamadriz/friendly-snippets"},
-	{'Diogo-ss/42-header.nvim'},
 })
 

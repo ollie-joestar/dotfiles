@@ -47,4 +47,21 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 alias ccc='cc -Wall -Wextra -Werror -g'
-alias nvim='flatpak run io.neovim.nvim'
+alias ccx='cc -lmlx -lXext -lX11 -lm -Wall -Wextra -Werror -g'
+alias lock='ft_lock'
+alias vgf='valgrind -s --leak-check=full --show-leak-kinds=all --trace-children=yes --track-fds=yes'
+alias 42free='bash /home/oohnivch/.scripts/42free.sh'
+alias rustgrade='git commit --allow-empty -m "grademe" && git push'
+#alias nvim='flatpak run io.neovim.nvim'
+export PATH=/home/oohnivch/.local/funcheck/host:$PATH
+export PATH=$HOME/.brew/bin:$PATH
+source <(fzf --zsh)
+export CARGO_HOME=/sgoinfre/$USER/rust
+export HOME_MAX_SIZE=5
+export SGOINFRE_MAX_SIZE=30
+export SGOINFRE='/sgoinfre/goinfre/Perso/oohnivch'
+export RUSTUP_HOME=/sgoinfre/oohnivch/.rustup
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

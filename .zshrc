@@ -62,6 +62,16 @@ export SGOINFRE_MAX_SIZE=30
 export SGOINFRE='/sgoinfre/goinfre/Perso/oohnivch'
 export RUSTUP_HOME=/sgoinfre/oohnivch/.rustup
 
+#export PATH=/home/oohnivch/.local/funcheck/host:$PATH
+#export PATH=/sgoinfre/$USER/.brew/bin:$PATH
+#export PATH=/goinfre/sgoinfre/Perso/$USER/.brew/bin:$PATH
+#export PATH=/sgoinfre/$USER:$PATH
+#export CARGO_HOME=/sgoinfre/$USER/rust
+#export HOME_MAX_SIZE=5
+#export SGOINFRE_MAX_SIZE=30
+#export SGOINFRE='/sgoinfre/oohnivch'
+#export RUSTUP_HOME=/sgoinfre/$USER/.rustup
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

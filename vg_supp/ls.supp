@@ -1,0 +1,9 @@
+{
+   general_leak_below_main
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   ...
+   obj:/usr/bin/ls
+   ...
+   fun:(below main)
+}

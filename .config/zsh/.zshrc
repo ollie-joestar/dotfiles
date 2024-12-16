@@ -3,7 +3,7 @@
 autoload -Uz promptinit
 promptinit
 #prompt adam1
-PROMPT='%B%(?.%F{green}Joestar.%F{red}XxXxXxX)%f%b %B%F{4}%1~%f%b '
+# PROMPT='%B%(?.%F{green}Joestar.%F{red}XxXxXxX)%f%b %B%F{4}%1~%f%b '
 
 setopt histignorealldups sharehistory
 
@@ -13,7 +13,7 @@ bindkey -e
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.config/zsh/.zsh_history
 
 # Use modern completion system
 autoload -Uz compinit
@@ -46,32 +46,46 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
 alias ccc='cc -Wall -Wextra -Werror -g'
 alias ccx='cc -lmlx -lXext -lX11 -lm -Wall -Wextra -Werror -g'
 alias lock='ft_lock'
 alias vgf='valgrind -s --leak-check=full --show-leak-kinds=all --trace-children=yes --track-fds=yes'
+alias vg='valgrind'
 alias 42free='bash /home/oohnivch/.scripts/42free.sh'
-alias rustgrade='git commit --allow-empty -m "grademe" && git push'
-#alias nvim='flatpak run io.neovim.nvim'
-export PATH=/home/oohnivch/.local/funcheck/host:$PATH
-export PATH=$HOME/.brew/bin:$PATH
-source <(fzf --zsh)
-export CARGO_HOME=/sgoinfre/$USER/rust
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gp='git pull'
+alias gps='git push'
+alias gst='git status'
+alias mini='cd /home/oohnivch/common_core/minishell/'
+alias mstest="bash /home/oohnivch/42_minishell_tester/tester.sh"
+
+
+
 export HOME_MAX_SIZE=5
 export SGOINFRE_MAX_SIZE=30
-export SGOINFRE='/sgoinfre/goinfre/Perso/oohnivch'
+export SGOINFRE='/sgoinfre/oohnivch'
+export PATH=/home/oohnivch/.local/funcheck/host:$PATH
+export PATH=$HOME/.brew/bin:$PATH
+export PATH=$SGOINFRE/.cargo/bin:$PATH
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
+export CARGO_HOME=/sgoinfre/$USER/.cargo
 export RUSTUP_HOME=/sgoinfre/oohnivch/.rustup
+export TERMINAL=kitty
+export EDITOR=nvim
+source <(fzf --zsh)
 
-#export PATH=/home/oohnivch/.local/funcheck/host:$PATH
-#export PATH=/sgoinfre/$USER/.brew/bin:$PATH
-#export PATH=/goinfre/sgoinfre/Perso/$USER/.brew/bin:$PATH
-#export PATH=/sgoinfre/$USER:$PATH
-#export CARGO_HOME=/sgoinfre/$USER/rust
-#export HOME_MAX_SIZE=5
-#export SGOINFRE_MAX_SIZE=30
-#export SGOINFRE='/sgoinfre/oohnivch'
-#export RUSTUP_HOME=/sgoinfre/$USER/.rustup
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Start tmux automatically if not already inside a tmux session
+if command -v tmux &> /dev/null; then
+    [ -z "$TMUX" ] && exec tmux
+fi
+
+eval "$(starship init zsh)"

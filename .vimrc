@@ -21,6 +21,8 @@ set incsearch
 " Enable true color support
 
 " Set number of screen lines to keep above and below the cursor
-set scrolloff=8
+set scrolloff=12
+
+set runtimepath^=$HOME/.config/vim
 
 colorscheme elflord

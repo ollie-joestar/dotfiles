@@ -20,23 +20,23 @@ ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.zshenv" "$HOME"/.zshenv
 
 # Install Nix Packages from config.nix
-# nix-env -iA nixpkgs.myPackages
+nix-env -iA nixpkgs.myPackages
 
-packages=(
-	tmux
-	tmuxplugin-vim-tmux-navigator-unstable
-	fd
-	ripgrep
-	npm
-	fzf
-	neovim
-	starship
-)
-
-for package in "${packages[@]}"; do
-	nix-env -iA nixpkgs."$package"
-done
-
+# packages=(
+# 	tmux
+# 	tmuxplugin-vim-tmux-navigator-unstable
+# 	fd
+# 	ripgrep
+# 	npm
+# 	fzf
+# 	neovim
+# 	starship
+# )
+#
+# for package in "${packages[@]}"; do
+# 	nix-env -iA nixpkgs."$package"
+# done
+#
 # Install tmux plugins
 ~/.tmux/plugins/tpm/tpm
 

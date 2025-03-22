@@ -1,2 +1,2 @@
---suppressions=/home/oohnivch/vg_supp/readline.supp
---suppressions=/home/oohnivch/vg_supp/ls.supp
+--suppressions=$HOME/vg_supp/readline.supp
+--suppressions=$HOME/vg_supp/ls.supp

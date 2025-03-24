@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# # Install Nix
+# sh <(curl -L https://nixos.org/nix/install)
 # Set up XDG_CONFIG_HOME
 
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -7,6 +9,7 @@ mkdir -p "$XDG_CONFIG_HOME"
 mkdir -p "$XDG_CONFIG_HOME"/nixpkgs
 
 # Create symlinks for existing configuration files
+[ -e "$XDG_CONFIG_HOME/nvim" ] && rm -rf "$XDG_CONFIG_HOME/nvim"
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$PWD/.vimrc" "$HOME"/.vimrc
 ln -sf "$PWD/.config/starship.toml" "$XDG_CONFIG_HOME"/starship.toml
@@ -38,6 +41,6 @@ nix-env -iA nixpkgs.myPackages
 # done
 #
 # Install tmux plugins
-~/.tmux/plugins/tpm/tpm
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 echo "Setup complete. Zsh configuration files have been downloaded and set up."

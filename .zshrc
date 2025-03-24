@@ -38,7 +38,10 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-alias ls='ls -G'
+alias ls='ls --color=auto'
+if [[ "$(uname)" == "Darwin" ]]; then
+	alias ls='ls -G'
+fi
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -56,11 +59,10 @@ alias gps='git push'
 alias gst='git status'
 
 export PATH=$HOME/.brew/bin:$PATH
-export PATH=$SGOINFRE/.cargo/bin:$PATH
+# export PATH=$SGOINFRE/.cargo/bin:$PATH
 export PATH="$HOME/.local/kitty.app/bin:$PATH"
-export TERMINAL=kitty
-export EDITOR=nvim
-
+# export TERM=xterm-256color
+export TERM=xterm-kitty
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

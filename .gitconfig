@@ -1,3 +1,5 @@
 [user]
 	name = Ollie Joestar
 	email = bigzzzid@gmail.com
+[credential]
+        helper = !'/usr/local/bin/devpod' agent git-credentials --port 12049

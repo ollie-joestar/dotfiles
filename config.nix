@@ -4,7 +4,6 @@
       name = "ollie-tools";
       paths = [
 		tmux
-		fd
 		ripgrep
 		fzf
         zsh-completions

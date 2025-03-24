@@ -14,17 +14,16 @@ ln -sf "$PWD/.config/kitty" "$XDG_CONFIG_HOME"/kitty
 ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/.tmux" "$HOME"/.tmux
 ln -sf "$PWD/.zshrc" "$HOME"/.zshrc
-ln -sf "$PWD/.gitconfig" "$HOME"/.gitconfig
-ln -sf "$PWD/config.nix" "$XDG_CONFIG_HOME"/nixpkgs/config.nix
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.zshenv" "$HOME"/.zshenv
+ln -sf "$PWD/.gitconfig" "$HOME"/.gitconfig
+ln -sf "$PWD/config.nix" "$XDG_CONFIG_HOME"/nixpkgs/config.nix
 
 # Install Nix Packages from config.nix
 nix-env -iA nixpkgs.myPackages
 
 # packages=(
 # 	tmux
-# 	tmuxplugin-vim-tmux-navigator-unstable
 # 	fd
 # 	ripgrep
 # 	npm
@@ -34,10 +33,10 @@ nix-env -iA nixpkgs.myPackages
 # )
 #
 # for package in "${packages[@]}"; do
-# 	nix-env -iA nixpkgs."$package"
+# 	brew install "$package"
 # done
 #
 # Install tmux plugins
-~/.tmux/plugins/tpm/tpm
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 echo "Setup complete. Zsh configuration files have been downloaded and set up."

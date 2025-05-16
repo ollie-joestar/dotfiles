@@ -1,7 +1,7 @@
 #!/bin/bash
 
 export XDG_CONFIG_HOME="$HOME"/.config
-# mkdir -p "$XDG_CONFIG_HOME"
+mkdir -p "$XDG_CONFIG_HOME"
 
 # Uncomment next 16 lines if you need to install Homebrew, Neovim and other dependencies
 
@@ -14,6 +14,7 @@ export XDG_CONFIG_HOME="$HOME"/.config
 # packages=(
 # 	ripgrep
 # 	fzf
+# 	node
 # 	neovim
 # )
 #

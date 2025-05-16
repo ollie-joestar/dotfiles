@@ -6,9 +6,9 @@
 		tmux
 		ripgrep
 		fzf
-        zsh-completions
-        neovim
-        nodejs_23
+		zsh-completions
+		neovim
+		nodejs_23
 		starship
       ];
     };

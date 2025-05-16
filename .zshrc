@@ -57,15 +57,18 @@ alias gco='git checkout'
 alias gp='git pull'
 alias gps='git push'
 alias gst='git status'
+alias mlx='git clone https://github.com/42Paris/minilibx-linux mlx'
+alias dis='open -a XQuartz && export DISPLAY=:0 && xhost +'
 
 export PATH=$HOME/.brew/bin:$PATH
-# export PATH=$SGOINFRE/.cargo/bin:$PATH
-export PATH="$HOME/.local/kitty.app/bin:$PATH"
+export PATH=$HOME/.cargo/bin:$PATH
 export PATH="$HOME/Library/Python/3.9/bin/:$PATH"
 export EDITOR=nvim
 
-# export TERM=xterm-256color
-export TERM=xterm-kitty
+export TERM=xterm-256color
+if [ -z "$DISPLAY" ]; then
+    export DISPLAY=localhost:0
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
